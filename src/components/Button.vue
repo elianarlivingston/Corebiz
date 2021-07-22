@@ -51,8 +51,11 @@ export default {
   margin: 0;
   border: none;
   font-size: 1rem; /* 16px */
-  padding: 0.5em 0.75em; /* 1em = al tamaño de fuente */
+  padding: 0.75em 1em; /* 1em = al tamaño de fuente */
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .btn--primary {
   background: black;
@@ -62,12 +65,10 @@ export default {
   background: white;
   color: black;
 }
-
 .btn--sm {
     font-size: .8rem;
 }
-
 .btn--lg {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 </style>

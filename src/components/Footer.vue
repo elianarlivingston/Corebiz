@@ -12,11 +12,11 @@
       </article>
 
       <div class="footer__buttons">
-        <button>
-          <svg
+        <Button color="secondary" size="sm"
+          ><svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="24"
+            height="24"
             fill="currentColor"
             class="bi bi-envelope-fill"
             viewBox="0 0 16 16"
@@ -26,12 +26,13 @@
             />
           </svg>
           <span>CONTACTANOS</span>
-        </button>
-        <button>
+        </Button>
+
+        <Button color="secondary" size="sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="24"
+            height="24"
             fill="currentColor"
             class="bi bi-headset"
             viewBox="0 0 16 16"
@@ -41,14 +42,16 @@
             />
           </svg>
           <span>HABLA CON UN CONSULTOR</span>
-        </button>
+        </Button>
       </div>
 
       <div class="footer__partners">
         <figure>
+          <figcaption>Desarrollado por</figcaption>
           <img src="../assets/logo-corebiz-white.svg" alt="" />
         </figure>
         <figure>
+          <figcaption>Powered by</figcaption>
           <img src="../assets/logo-vtex.png" alt="" />
         </figure>
       </div>
@@ -57,8 +60,11 @@
 </template>
 
 <script>
+import Button from "./Button.vue";
+
 export default {
   name: "Footer",
+  components: { Button },
   setup() {
     return {};
   },
@@ -93,8 +99,39 @@ export default {
   background-color: white;
   margin-top: 0.5rem;
 }
+.footer__buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.footer__partners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  object-fit: cover;
+}
+figcaption {
+  font-size: .75rem;
+}
 
-.footer__buttons {
-  
+@media screen and (min-width: 780px)  {
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 </style>

@@ -1,18 +1,16 @@
 <template>
   <Header></Header>
-  <!-- <Footer></Footer> -->
-  <Button color="primary" size="sm"> Hola! </Button>
-  <Button color="secondary"> Hola! </Button>
-  <Button size="lg"> Hola! </Button>
+  <Newsletter></Newsletter>
+  <Footer></Footer>
 </template>
 <script>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
-import Button from "./components/Button.vue";
+import Newsletter from "./components/Newsletter.vue";
 
 export default {
   name: "App",
-  components: { Header, Footer, Button },
+  components: { Header, Footer, Newsletter },
 };
 </script>
 
